@@ -984,9 +984,8 @@ void tglf_fetch_message_media_new (struct tgl_state *TLS, struct tgl_message_med
   //  M->type = tgl_message_media_unsupported;
   //  break;
   case CODE_message_media_web_page:
-    M->type = tgl_message_media_webpage;
-    M->webpage = tglf_fetch_alloc_webpage_new (TLS, DS_MM->webpage);
-    break;
+  M->type = tgl_message_media_unsupported;
+  break;
   case CODE_message_media_venue:
     M->type = tgl_message_media_venue;
     tglf_fetch_geo_new (TLS, &M->venue.geo, DS_MM->geo);
